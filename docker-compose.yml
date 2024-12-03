@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  postgres_17:
+    image: postgres:17-alpine
+    ports:
+      - 5432:5432
+    volumes:
+      - ~/docker-vol/postgres-aoc/17:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=aoc
+      - POSTGRES_USER=aoc
+      - POSTGRES_DB=aoc
